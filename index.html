@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="head1">
+        <h2>Bank Account</h2>
+    </div>
+    <div class="inputData">
+        <form action="" method="get" name="myForm">
+            <label> First Name: </label> <input type="text" name="fname" />
+            <br>
+            <label> Last Name: </label><input type="text" name="lname">
+            <br>
+            <label>Enter Email: </label><input type="email" name="email">
+            <br>
+            <!-- other bank details -->
+            <label>Account Number: </label><input type="text" name="accno">
+            <br>
+            <label>Account Type: </label><input type="text" name="acctype">
+            <br>
+            <button class="b1" type="submit" onclick="validateForm()">Submit</button>
+        </form>
+    </div>
+
+    </div>
+</body>
+<script>
+    function validateForm() {
+
+        var x = document.forms["myForm"]["fname"].value;
+        if (x == "") {
+            alert("First Name must be filled out");
+            return false;
+        }
+        var y = document.forms["myForm"]["lname"].value;
+        if (y == "") {
+            alert("Last Name must be filled out");
+            return false;
+        }
+        var z = document.forms["myForm"]["email"].value;
+        if (z == "") {
+            alert("Email must be filled out");
+            return false;
+        }
+        var a = document.forms["myForm"]["accno"].value;
+        if (a == "") {
+            alert("Account Number must be filled out");
+            return false;
+        }
+        var b = document.forms["myForm"]["acctype"].value;
+        if (b == "") {
+            alert("Account Type must be filled out");
+            return false;
+        }
+        alert("Form Submitted Successfully");
+
+        }
+
+
+
+
+</script>
+
+</html>
